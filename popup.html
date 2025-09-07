@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Gemini Chat</h1>
+      <div class="api-key-section">
+        <input type="password" id="apiKeyInput" placeholder="Enter API Key">
+        <button id="saveApiKey">Save</button>
+      </div>
+    </div>
+
+    <div class="chat-container">
+      <div id="chatMessages" class="chat-messages">
+        <div class="welcome-message">
+          <p>Welcome! Upload up to 2 images and enter your prompt to chat with Gemini.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="input-section">
+      <div class="image-upload-container">
+        <div class="image-slots">
+          <div class="image-slot" id="imageSlot1">
+            <input type="file" id="image1" accept="image/*" class="image-input">
+            <label for="image1" class="image-label">
+              <span class="upload-icon">📷</span>
+              <span class="upload-text">Image 1</span>
+            </label>
+            <img class="image-preview" id="preview1" style="display: none;">
+            <button class="remove-btn" id="remove1" style="display: none;">×</button>
+          </div>
+          <div class="image-slot" id="imageSlot2">
+            <input type="file" id="image2" accept="image/*" class="image-input">
+            <label for="image2" class="image-label">
+              <span class="upload-icon">📷</span>
+              <span class="upload-text">Image 2</span>
+            </label>
+            <img class="image-preview" id="preview2" style="display: none;">
+            <button class="remove-btn" id="remove2" style="display: none;">×</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-input-container">
+        <textarea 
+          id="textPrompt" 
+          placeholder="Enter your message..."
+          rows="3"
+        ></textarea>
+        <button id="sendButton" class="send-button">
+          <span class="send-icon">➤</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
