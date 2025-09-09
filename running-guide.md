@@ -144,7 +144,7 @@ Key UI elements:
 let ai = null;
 function initClient() {
   if (!ai) {
-    ai = new GoogleGenAI({ apiKey: 'AIzaSyA2YtcJzjG7DBihByPTJyuIaLMI4TCmy4g' });
+    ai = new GoogleGenAI({ apiKey: 'API_KEY' });
   }
   return ai;
 }
@@ -273,7 +273,7 @@ npm run build
 ### 1. API Key Exposure ⚠️
 ```javascript
 // CURRENT CODE (INSECURE):
-ai = new GoogleGenAI({ apiKey: 'AIzaSyA2YtcJzjG7DBihByPTJyuIaLMI4TCmy4g' });
+ai = new GoogleGenAI({ apiKey: 'API_KEY' });
 ```
 
 **Critical Security Issue**: API key is hardcoded and exposed in client-side code.
@@ -296,7 +296,7 @@ ai = new GoogleGenAI({ apiKey: 'AIzaSyA2YtcJzjG7DBihByPTJyuIaLMI4TCmy4g' });
 **Current Issue**: Hardcoded API key in client code
 ```javascript
 // BAD: Exposed API key
-ai = new GoogleGenAI({ apiKey: 'AIzaSyA2YtcJzjG7DBihByPTJyuIaLMI4TCmy4g' });
+ai = new GoogleGenAI({ apiKey: 'API_KEY' });
 ```
 
 **Solutions**:
